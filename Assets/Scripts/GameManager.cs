@@ -5,11 +5,13 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text gameOverText;
+    [SerializeField] private TMP_Text gameWinText;
     [SerializeField] private PlayerDogController playerDog;
 
     private void Start()
     {
         playerDog.OnExceedSuspicion += HandleExceedSuspicion;
+        playerDog.OnWin += HandleOnWin;
     }
 
     private void Update()
@@ -29,6 +31,12 @@ public class GameManager : MonoBehaviour
     private void ResetGame()
     {
         gameOverText.gameObject.SetActive(false);
+        gameWinText.gameObject.SetActive(false);
+    }
+
+    private void HandleOnWin()
+    {
+        gameWinText.gameObject.SetActive(true);
     }
 
     private void HandleExceedSuspicion()

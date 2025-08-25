@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Biscuit
+  - Goal
   layers:
   - Default
   - TransparentFX

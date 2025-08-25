@@ -17,9 +17,11 @@ public class PlayerDogController : MonoBehaviour
 
     // Events
     public System.Action OnExceedSuspicion;
+    public System.Action OnWin;
 
     // Biscuits
-    public GameObject CarriedBiscuit;
+    [SerializeField] private GameObject carriedBiscuit;
+    [SerializeField] private bool carryingBiscuit;
 
     void Start()
     {
@@ -49,6 +51,13 @@ public class PlayerDogController : MonoBehaviour
             TakeBiscuit();
             Destroy(other.gameObject);
         }
+        else if (other.CompareTag(Tags.Goal))
+        {
+            if (CheckWinCondition())
+            {
+                OnWin?.Invoke();
+            }
+        }
     }
 
     private void UpdateMovement()
@@ -66,8 +75,14 @@ public class PlayerDogController : MonoBehaviour
         }
     }
 
+    private bool CheckWinCondition()
+    {
+        return carryingBiscuit;
+    }
+
     private void TakeBiscuit()
     {
-        CarriedBiscuit.gameObject.SetActive(true);
+        carriedBiscuit.gameObject.SetActive(true);
+        carryingBiscuit = true;
     }
 }
