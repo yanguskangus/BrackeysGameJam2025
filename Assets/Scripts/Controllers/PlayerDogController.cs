@@ -18,6 +18,9 @@ public class PlayerDogController : MonoBehaviour
     // Events
     public System.Action OnExceedSuspicion;
 
+    // Biscuits
+    public GameObject CarriedBiscuit;
+
     void Start()
     {
         suspicionBar.maxValue = maxSuspicion;
@@ -32,6 +35,20 @@ public class PlayerDogController : MonoBehaviour
     private void LateUpdate()
     {
         suspicionBar.value = Suspicion;
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        _moveInput = context.ReadValue<Vector2>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(Tags.Biscuit))
+        {
+            TakeBiscuit();
+            Destroy(other.gameObject);
+        }
     }
 
     private void UpdateMovement()
@@ -49,8 +66,8 @@ public class PlayerDogController : MonoBehaviour
         }
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    private void TakeBiscuit()
     {
-        _moveInput = context.ReadValue<Vector2>();
+        CarriedBiscuit.gameObject.SetActive(true);
     }
 }
