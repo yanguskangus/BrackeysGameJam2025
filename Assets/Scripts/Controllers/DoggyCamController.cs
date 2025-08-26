@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class DoggyCamController : MonoBehaviour
 {
-    public int Suspicion;
+    /// <summary>
+    /// How much suspicion being spotted by this camera builds, per frame
+    /// </summary>
+    public int SuspicionRate;
 }

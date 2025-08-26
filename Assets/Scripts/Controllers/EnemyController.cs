@@ -45,6 +45,7 @@ public class EnemyController : MonoBehaviour
     {
         // If at the next point, update nextPathingPoint
         Vector2 target2D = pathingPoints[nextPathingPointIndex];
+        // TODO: Calculate distance between points and see if difference is within a threshold (to avoid floating point error)
         if (transform.position == new Vector3(target2D.x, target2D.y, transform.position.z)) { // Is this bad 2D to 3D conversion?
             nextPathingPointIndex++;
             if (nextPathingPointIndex > pathingPoints.Length)
@@ -57,6 +58,8 @@ public class EnemyController : MonoBehaviour
         // If not facing the next point, turn towards it
 
         // If facing the next point, move towards it
+
+        // Check if player is within vision cone
     }
 
     protected void playerEnteredSightCone()

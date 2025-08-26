@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e1736f99baf3d47a0a451bca03d6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Suspicion: 20
+  Suspicion: 5
 --- !u!95 &1371606231
 Animator:
   serializedVersion: 7
@@ -1799,6 +1799,14 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 80149395798588660}
+    - target: {fileID: -6396359706302979529, guid: 3ac2b8d0fb2e28b47a0fcf7ee106dd26, type: 3}
+      propertyPath: suspicionDecayRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -6396359706302979529, guid: 3ac2b8d0fb2e28b47a0fcf7ee106dd26, type: 3}
+      propertyPath: suspicionDecayInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1121182567483198498, guid: 3ac2b8d0fb2e28b47a0fcf7ee106dd26, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2673

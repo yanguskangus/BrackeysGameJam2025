@@ -9,7 +9,7 @@ public class DoggyCamSightlineController : MonoBehaviour
         if (other.gameObject.CompareTag(Tags.Dog))
         {
             var dog = other.gameObject.GetComponent<PlayerDogController>();
-            dog.TakeSuspicion(doggyCam.Suspicion);
+            dog.TakeSuspicion(doggyCam.SuspicionRate);
         }
     }
 }

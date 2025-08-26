@@ -13,7 +13,10 @@ public class PlayerDogController : MonoBehaviour
     // Suspicion meter
     [SerializeField] private Slider suspicionBar;
     [SerializeField] private int maxSuspicion;
+    [SerializeField] private int suspicionDecayInterval; // delay before suspicion starts decaying, in seconds
+    [SerializeField] private int suspicionDecayRate; // amount suspicion drops each interval
     public int Suspicion;
+    private float secondsUntilSuspicionDecay; // how long until suspicion meter can decay
 
     // Events
     public System.Action OnExceedSuspicion;
@@ -31,11 +34,13 @@ public class PlayerDogController : MonoBehaviour
     {
         suspicionBar.maxValue = maxSuspicion;
         suspicionBar.value = Suspicion;
+        secondsUntilSuspicionDecay = 0;
     }
 
     void Update()
     {
         UpdateMovement();
+        DecaySuspicion();
     }
 
     private void LateUpdate()
@@ -81,8 +86,21 @@ public class PlayerDogController : MonoBehaviour
         rb.linearVelocity = moveSpeed * _moveInput;
     }
 
+    private void DecaySuspicion()
+    {
+        secondsUntilSuspicionDecay -= Time.deltaTime;
+        if (secondsUntilSuspicionDecay <= 0)
+        {
+            secondsUntilSuspicionDecay = suspicionDecayInterval;
+            Suspicion = Mathf.Max(0, Suspicion - suspicionDecayRate);
+        }
+    }
+
     public void TakeSuspicion(int damage)
     {
+        // Reset the suspicion decay delay
+        secondsUntilSuspicionDecay = suspicionDecayInterval;
+
         Suspicion = Mathf.Min(Suspicion + damage, maxSuspicion);
 
         if (Suspicion >= maxSuspicion)
