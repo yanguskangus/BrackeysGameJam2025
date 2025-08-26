@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,111 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_Run_Animation_Left_2_0
+      name: DogRunLeft_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 145
-        width: 62
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5272fe263b3282bc0800000000000000
-      internalID: -3807754231575795931
+      spriteID: 2c7453a6da656b549b45d3c90fe6b851
+      internalID: -133008262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_Run_Animation_Left_2_1
+      name: DogRunLeft_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 141
-        width: 62
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5f0e34033bf2da400800000000000000
-      internalID: 336977993778061557
+      spriteID: 1c2ac017c636dc245a7647ad36c578a1
+      internalID: -1061364597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_Run_Animation_Left_2_2
+      name: DogRunLeft_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 77
-        width: 62
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2f731dd880b143110800000000000000
-      internalID: 1239645520986716146
+      spriteID: 3a338a5a0b3277d4fb038a73e21231a5
+      internalID: 1935714698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_Run_Animation_Left_2_3
+      name: DogRunLeft_3
       rect:
         serializedVersion: 2
-        x: 65
-        y: 79
-        width: 58
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0541c79f1da37d300800000000000000
-      internalID: 276754575614809168
+      spriteID: 9a93ed7ec1af6f74eb7e8c9872ff1add
+      internalID: 172778088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_Run_Animation_Left_2_4
+      name: DogRunLeft_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 17
-        width: 58
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d56f5a7cfb34485e0800000000000000
-      internalID: -1908325851130890659
+      spriteID: 95097a9d771de96459386d9a7be5ad89
+      internalID: -405880348
       vertices: []
       indices: 
       edges: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3a5f29dfcc6db5544904a1ac766cf6d3
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MC_Run_Animation_Left_2_0: -3807754231575795931
-      MC_Run_Animation_Left_2_1: 336977993778061557
-      MC_Run_Animation_Left_2_2: 1239645520986716146
-      MC_Run_Animation_Left_2_3: 276754575614809168
-      MC_Run_Animation_Left_2_4: -1908325851130890659
+      DogRunLeft_0: -133008262
+      DogRunLeft_1: -1061364597
+      DogRunLeft_2: 1935714698
+      DogRunLeft_3: 172778088
+      DogRunLeft_4: -405880348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

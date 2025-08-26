@@ -19,6 +19,10 @@ public class PlayerDogController : MonoBehaviour
     public System.Action OnExceedSuspicion;
     public System.Action OnWin;
 
+    // Animations
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     // Biscuits
     [SerializeField] private GameObject carriedBiscuit;
     [SerializeField] private bool carryingBiscuit;
@@ -42,6 +46,17 @@ public class PlayerDogController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         _moveInput = context.ReadValue<Vector2>();
+
+        if (_moveInput.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (_moveInput.x < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        animator.SetBool(AnimationParameters.Running, _moveInput.sqrMagnitude > Mathf.Epsilon);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

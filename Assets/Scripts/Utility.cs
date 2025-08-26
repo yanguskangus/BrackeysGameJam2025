@@ -6,3 +6,8 @@ public static class Tags
     public static string Goal = "Goal";
     public static string Dog = "Dog";
 }
+
+public static class AnimationParameters
+{
+    public static string Running = "Running";
+}
