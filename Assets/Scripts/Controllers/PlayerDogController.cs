@@ -56,6 +56,7 @@ public class PlayerDogController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+        PositionBiscuit(spriteRenderer.flipX);
         animator.SetBool(AnimationParameters.Running, _moveInput.sqrMagnitude > Mathf.Epsilon);
     }
 
@@ -99,5 +100,16 @@ public class PlayerDogController : MonoBehaviour
     {
         carriedBiscuit.gameObject.SetActive(true);
         carryingBiscuit = true;
+
+        PositionBiscuit(spriteRenderer.flipX);
+    }
+
+    private void PositionBiscuit(bool flipped)
+    {
+        var direction = flipped ? 1 : -1;
+        var localPosition = carriedBiscuit.transform.localPosition;
+
+        localPosition.x = direction * Mathf.Abs(localPosition.x);
+        carriedBiscuit.transform.localPosition = localPosition;
     }
 }
