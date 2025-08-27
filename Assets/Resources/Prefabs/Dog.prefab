@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1121182567483198498
 Transform:
   m_ObjectHideFlags: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901213700823781787}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.2595432, w: 0.9657315}
-  m_LocalPosition: {x: 0.138, y: 0.018, z: -0.037154682}
+  m_LocalRotation: {x: -0, y: -0, z: 0.45690396, w: 0.88951606}
+  m_LocalPosition: {x: -0.2673, y: 0.2136, z: -0.037154682}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1156876790225075628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.086}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 54.375}
 --- !u!212 &6802604990018440876
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -238,9 +238,10 @@ GameObject:
   - component: {fileID: 4887449446047563539}
   - component: {fileID: 4169248045974847624}
   - component: {fileID: 4674879134173474775}
-  m_Layer: 0
+  - component: {fileID: 9055800126455742674}
+  m_Layer: 7
   m_Name: Dog
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,10 +277,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4887449446047563539}
   moveSpeed: 2
-  suspicionBar: {fileID: 0}
+  dashSpeed: 5
+  dashCooldownDuration: 0.1
+  dashDuration: 0.15
   maxSuspicion: 100
+  suspicionDecayInterval: 1
+  suspicionDecayRate: 10
   Suspicion: 0
-  CarriedBiscuit: {fileID: 1901213700823781787}
+  animator: {fileID: 9055800126455742674}
+  spriteRenderer: {fileID: 4169248045974847624}
+  carriedBiscuit: {fileID: 1901213700823781787}
+  CarryBiscuit: 0
 --- !u!114 &-8124080144986766909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +346,19 @@ MonoBehaviour:
     m_ActionId: 27c5f898-bc57-4ee1-8800-db469aca5fe3
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -6396359706302979529}
+        m_TargetAssemblyTypeName: PlayerDogController, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f1ba0d36-48eb-4cd5-b651-1c94a6531f70
     m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
@@ -424,7 +444,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &4169248045974847624
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -469,7 +489,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2300788666986400577, guid: f8f3aaf803f726c4d9a8b6bbd95b6a9e, type: 3}
+  m_Sprite: {fileID: -405880348, guid: c16fff390b5048845a31507ac8d1ccf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -514,15 +534,37 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.036930144, y: 0.15641677}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.15}
+    pivot: {x: 0.5, y: 0.22}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.3, y: 0.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.48655474, y: 0.2042005}
   m_EdgeRadius: 0
+--- !u!95 &9055800126455742674
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815616097829376906}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cda1e1eae68d26e4eb026d74133385fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

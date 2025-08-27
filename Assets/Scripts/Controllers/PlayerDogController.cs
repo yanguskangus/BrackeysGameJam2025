@@ -21,7 +21,7 @@ public class PlayerDogController : MonoBehaviour
     private Vector2 _moveInput;
 
     // Suspicion meter
-    [SerializeField] private Slider suspicionBar;
+    // [SerializeField] private Slider suspicionBar;
     [SerializeField] private int maxSuspicion;
     [SerializeField] private int suspicionDecayInterval; // delay before suspicion starts decaying, in seconds
     [SerializeField] private int suspicionDecayRate; // amount suspicion drops each interval
@@ -42,8 +42,8 @@ public class PlayerDogController : MonoBehaviour
 
     void Start()
     {
-        suspicionBar.maxValue = maxSuspicion;
-        suspicionBar.value = Suspicion;
+        /* suspicionBar.maxValue = maxSuspicion;
+        suspicionBar.value = Suspicion; */
         secondsUntilSuspicionDecay = 0;
     }
 
@@ -58,7 +58,7 @@ public class PlayerDogController : MonoBehaviour
 
     private void LateUpdate()
     {
-        suspicionBar.value = Suspicion;
+        // suspicionBar.value = Suspicion;
     }
 
     public void OnDash(InputAction.CallbackContext context)
