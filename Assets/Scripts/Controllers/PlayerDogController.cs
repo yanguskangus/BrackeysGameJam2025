@@ -38,7 +38,7 @@ public class PlayerDogController : MonoBehaviour
 
     // Biscuits
     [SerializeField] private GameObject carriedBiscuit;
-    [SerializeField] private bool carryingBiscuit;
+    public bool CarryBiscuit;
 
     void Start()
     {
@@ -63,7 +63,7 @@ public class PlayerDogController : MonoBehaviour
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        /* if (context.performed)
+        if (context.performed)
         {
             // Conditions for dashing:
             // - doggo must to be dashing already
@@ -73,7 +73,7 @@ public class PlayerDogController : MonoBehaviour
             {
                 Dash();
             }
-        } */
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -171,19 +171,19 @@ public class PlayerDogController : MonoBehaviour
 
     private bool CheckWinCondition()
     {
-        return carryingBiscuit;
+        return CarryBiscuit;
     }
 
     private void EatBiscuit()
     {
         carriedBiscuit.gameObject.SetActive(false);
-        carryingBiscuit = false;
+        CarryBiscuit = false;
     }
 
     private void TakeBiscuit()
     {
         carriedBiscuit.gameObject.SetActive(true);
-        carryingBiscuit = true;
+        CarryBiscuit = true;
 
         PositionBiscuit(spriteRenderer.flipX);
     }

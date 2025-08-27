@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,14 +15,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text gameWinText;
 
     // Level data
-    [SerializeField] private int currentLevel;
-    [SerializeField] private List<Transform> spawnPoints;
+    [SerializeField] private Transform spawnPoint;
 
 
     private void Start()
     {
         playerDog.OnExceedSuspicion += HandleExceedSuspicion;
         playerDog.OnDepositBiscuit += HandleDepositBiscuit;
+
+        playerDog.transform.position = spawnPoint.position;
     }
 
     private void Update()
@@ -30,20 +32,11 @@ public class GameManager : MonoBehaviour
         {
             ResetLevel();
         }
-
-        /* // Test
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            playerDog.TakeSuspicion(100);
-        } */
     }
 
     private void ResetLevel()
     {
-        gameOverText.gameObject.SetActive(false);
-        gameWinText.gameObject.SetActive(false);
-
-        playerDog.transform.position = spawnPoints[currentLevel].position;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void HandleDepositBiscuit()

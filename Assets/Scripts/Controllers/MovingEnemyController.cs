@@ -39,6 +39,17 @@ public class MovingEnemyController : EnemyController
     /// </summary>
     private int nextPathingPointIndex;
 
+    // States
+    [SerializeField] private MoveType _moveType;
+    private bool _isAlertMode;
+
+    // Chase parameters
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float chaseSpeed;
+
+    // Starts chasing when the player dog is this far from the unit
+    [SerializeField] private float startChaseDistance;
+    private PlayerDogController _playerDog;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -59,10 +70,49 @@ public class MovingEnemyController : EnemyController
             var rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, dir));
             transform.rotation = rotation;
         }
+
+        _playerDog = GameObject.FindGameObjectWithTag(Tags.Dog).GetComponent<PlayerDogController>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        UpdateMoveState();
+
+        switch (_moveType)
+        {
+            case MoveType.Patrol:
+                HandlePatrolMovement();
+                break;
+            case MoveType.Catch:
+                HandleCatchMovement();
+                break;
+        }
+    }
+
+    private void UpdateMoveState()
+    {
+        if (_moveType == MoveType.Patrol)
+        {
+            if (_playerDog.CarryBiscuit)
+            {
+                var relativeDirection = _playerDog.transform.position - transform.position;
+                var sqrDst = relativeDirection.sqrMagnitude;
+                if (sqrDst < startChaseDistance * startChaseDistance)
+                {
+                    _moveType = MoveType.Catch;
+                }
+            }
+        }
+    }
+
+    private void HandleCatchMovement()
+    {
+        Vector2 relativeDirection = (_playerDog.transform.position - transform.position).normalized;
+        rb.linearVelocity = chaseSpeed * relativeDirection;
+    }
+
+    private void HandlePatrolMovement()
     {
         // If at the next point, update nextPathingPoint
         Vector3 target = pathingPoints[nextPathingPointIndex].position;
@@ -114,4 +164,10 @@ public class MovingEnemyController : EnemyController
         // Thank you Unity 2D
         return transform.right;
     }
+}
+
+public enum MoveType
+{
+    Patrol,
+    Catch
 }
