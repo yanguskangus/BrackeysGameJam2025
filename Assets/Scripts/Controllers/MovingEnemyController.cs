@@ -20,7 +20,7 @@ public class MovingEnemyController : EnemyController
     /// World points this enemy paths between
     /// </summary>
     [SerializeField]
-    private Vector3[] pathingPoints;
+    private Transform[] pathingPoints;
 
     /// <summary>
     /// Distance to target at which enemy is "close enough" to target
@@ -43,15 +43,29 @@ public class MovingEnemyController : EnemyController
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // TODO: Spawn at pathingPoints[0] (?)
         nextPathingPointIndex = 0;
+
+        if (pathingPoints.Length > 0)
+        {
+            transform.position = pathingPoints[0].transform.position;
+        }
+
+        if (pathingPoints.Length > 1)
+        {
+            var nextPoint = pathingPoints[1];
+            var startPoint = pathingPoints[0];
+
+            var dir = nextPoint.transform.position - startPoint.transform.position;
+            var rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, dir));
+            transform.rotation = rotation;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         // If at the next point, update nextPathingPoint
-        Vector3 target = pathingPoints[nextPathingPointIndex];
+        Vector3 target = pathingPoints[nextPathingPointIndex].position;
         if (isAtTargetPoint(target))
         {
             nextPathingPointIndex++;
@@ -59,7 +73,7 @@ public class MovingEnemyController : EnemyController
             {
                 nextPathingPointIndex = 0;
             }
-            target = pathingPoints[nextPathingPointIndex];
+            target = pathingPoints[nextPathingPointIndex].position;
         }
 
         if (isLookingAt(target))
@@ -73,6 +87,15 @@ public class MovingEnemyController : EnemyController
             float angle = Mathf.Atan2(target.y - transform.position.y, target.x - transform.position.x) * Mathf.Rad2Deg;
             Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        foreach (var pathingPoint in pathingPoints)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(pathingPoint.position, 0.05f);
         }
     }
 

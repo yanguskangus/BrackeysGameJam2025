@@ -10,4 +10,5 @@ public static class Tags
 public static class AnimationParameters
 {
     public static string Running = "Running";
+    public static string Dashing = "Dashing";
 }

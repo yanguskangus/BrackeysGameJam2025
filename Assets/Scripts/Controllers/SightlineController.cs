@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoggyCamSightlineController : MonoBehaviour
+public class SightlineController : MonoBehaviour
 {
     [SerializeField] private EnemyController attachedEnemy;
 
@@ -9,7 +9,8 @@ public class DoggyCamSightlineController : MonoBehaviour
         if (other.gameObject.CompareTag(Tags.Dog))
         {
             var dog = other.gameObject.GetComponent<PlayerDogController>();
-            dog.TakeSuspicion(attachedEnemy.SuspicionRate);
+            // dog.TakeSuspicion(attachedEnemy.SuspicionRate);
+            dog.GetCaught();
         }
     }
 }

@@ -8,6 +8,16 @@ public class PlayerDogController : MonoBehaviour
     // Movement
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
+
+    // dashing
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashCooldownDuration;
+    [SerializeField] private float dashDuration;
+    private float _dashTime;
+    private float _dashCooldownTime;
+    private Vector2 _dashDirection;
+    private bool _dashing;
+
     private Vector2 _moveInput;
 
     // Suspicion meter
@@ -41,11 +51,29 @@ public class PlayerDogController : MonoBehaviour
     {
         UpdateMovement();
         DecaySuspicion();
+
+        animator.SetBool(AnimationParameters.Dashing, _dashing);
+        animator.SetBool(AnimationParameters.Running, _moveInput.sqrMagnitude > Mathf.Epsilon);
     }
 
     private void LateUpdate()
     {
         suspicionBar.value = Suspicion;
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        /* if (context.performed)
+        {
+            // Conditions for dashing:
+            // - doggo must to be dashing already
+            // - cooldown needs to be greater than 0
+            // - player must be pressing a directional key
+            if (!_dashing && _dashCooldownTime <= 0 && _moveInput.sqrMagnitude > Mathf.Epsilon)
+            {
+                Dash();
+            }
+        } */
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -62,7 +90,6 @@ public class PlayerDogController : MonoBehaviour
         }
 
         PositionBiscuit(spriteRenderer.flipX);
-        animator.SetBool(AnimationParameters.Running, _moveInput.sqrMagnitude > Mathf.Epsilon);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -84,7 +111,34 @@ public class PlayerDogController : MonoBehaviour
 
     private void UpdateMovement()
     {
-        rb.linearVelocity = moveSpeed * _moveInput;
+        if (_dashing)
+        {
+            rb.linearVelocity = dashSpeed * _dashDirection;
+
+            if (_dashTime <= Mathf.Epsilon)
+            {
+                _dashing = false;
+                _dashDirection = Vector2.zero;
+                _dashTime = 0;
+            }
+            else
+            {
+                _dashTime -= Time.deltaTime;
+                _dashCooldownTime = dashCooldownDuration;
+            }
+        }
+        else
+        {
+            rb.linearVelocity = moveSpeed * _moveInput;
+            _dashCooldownTime = Mathf.Max(_dashCooldownTime - Time.deltaTime, 0);
+        }
+    }
+
+    private void Dash()
+    {
+        _dashing = true;
+        _dashTime = dashDuration;
+        _dashDirection = _moveInput;
     }
 
     private void DecaySuspicion()
@@ -108,6 +162,11 @@ public class PlayerDogController : MonoBehaviour
         {
             OnExceedSuspicion?.Invoke();
         }
+    }
+
+    public void GetCaught()
+    {
+        OnExceedSuspicion?.Invoke();
     }
 
     private bool CheckWinCondition()
