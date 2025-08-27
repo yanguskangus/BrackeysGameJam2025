@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e1736f99baf3d47a0a451bca03d6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SuspicionRate: 0
+  SuspicionRate: 5
 --- !u!95 &1371606231
 Animator:
   serializedVersion: 7
@@ -1436,11 +1436,6 @@ MonoBehaviour:
   gameOverText: {fileID: 428943299}
   gameWinText: {fileID: 391814098}
   playerDog: {fileID: 80149395798588658}
-  grid:
-    center: {fileID: 1558850269}
-    rows: 50
-    columns: 50
-    cellSize: 0.25
 --- !u!1 &1480236982
 GameObject:
   m_ObjectHideFlags: 0
