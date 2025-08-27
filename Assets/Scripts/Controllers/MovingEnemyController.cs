@@ -52,7 +52,8 @@ public class MovingEnemyController : EnemyController
     {
         // If at the next point, update nextPathingPoint
         Vector3 target = pathingPoints[nextPathingPointIndex];
-        if (isAtTargetPoint(target)) {
+        if (isAtTargetPoint(target))
+        {
             nextPathingPointIndex++;
             if (nextPathingPointIndex > pathingPoints.Length - 1)
             {

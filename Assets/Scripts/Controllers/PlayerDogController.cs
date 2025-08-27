@@ -20,7 +20,7 @@ public class PlayerDogController : MonoBehaviour
 
     // Events
     public System.Action OnExceedSuspicion;
-    public System.Action OnWin;
+    public System.Action OnDepositBiscuit;
 
     // Animations
     [SerializeField] private Animator animator;
@@ -76,7 +76,8 @@ public class PlayerDogController : MonoBehaviour
         {
             if (CheckWinCondition())
             {
-                OnWin?.Invoke();
+                EatBiscuit();
+                OnDepositBiscuit?.Invoke();
             }
         }
     }
@@ -114,6 +115,12 @@ public class PlayerDogController : MonoBehaviour
         return carryingBiscuit;
     }
 
+    private void EatBiscuit()
+    {
+        carriedBiscuit.gameObject.SetActive(false);
+        carryingBiscuit = false;
+    }
+
     private void TakeBiscuit()
     {
         carriedBiscuit.gameObject.SetActive(true);
@@ -126,7 +133,6 @@ public class PlayerDogController : MonoBehaviour
     {
         var direction = flipped ? 1 : -1;
         var localPosition = carriedBiscuit.transform.localPosition;
-
         localPosition.x = direction * Mathf.Abs(localPosition.x);
         carriedBiscuit.transform.localPosition = localPosition;
     }
