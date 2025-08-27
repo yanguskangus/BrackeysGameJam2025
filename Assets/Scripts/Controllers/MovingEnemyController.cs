@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class MovingEnemyController : MonoBehaviour
+public class MovingEnemyController : EnemyController
 {
     /// <summary>
     /// How quickly this enemy moves, if at all
@@ -33,11 +33,6 @@ public class MovingEnemyController : MonoBehaviour
     /// </summary>
     [SerializeField]
     private float targetLookThreshold; // Could probably be a constant
-
-    /// <summary>
-    /// How much suspicion being spotted by this enemy builds, per frame
-    /// </summary>
-    public int SuspicionRate;
 
     /// <summary>
     /// The most recent pathing point the enemy reached

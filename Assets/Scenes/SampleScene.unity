@@ -853,10 +853,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 560900821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2344871a027141740afb830df9246a68, type: 3}
+  m_Script: {fileID: 11500000, guid: 80e5bc278ce6d0e4f9e293c36edc86e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingEnemy: {fileID: 1963407006}
+  attachedEnemy: {fileID: 1963407006}
 --- !u!1 &605522072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,8 +1251,8 @@ GameObject:
   - component: {fileID: 1371606227}
   - component: {fileID: 1371606226}
   - component: {fileID: 1371606229}
-  - component: {fileID: 1371606230}
   - component: {fileID: 1371606231}
+  - component: {fileID: 1371606232}
   m_Layer: 0
   m_Name: DoggyCamera
   m_TagString: Untagged
@@ -1367,19 +1367,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &1371606230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371606225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98e1736f99baf3d47a0a451bca03d6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SuspicionRate: 5
 --- !u!95 &1371606231
 Animator:
   serializedVersion: 7
@@ -1402,6 +1389,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1371606232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371606225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af9417e395c99341ac568e2ab4c45d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SuspicionRate: 1
 --- !u!1 &1388609077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e5bc278ce6d0e4f9e293c36edc86e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doggyCam: {fileID: 1371606230}
+  attachedEnemy: {fileID: 1371606232}
 --- !u!1 &1558850268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c386fd990a56e4a8925200d412eb5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SuspicionRate: 1
   moveSpeed: 0.5
   turnSpeed: 90
   pathingPoints:
@@ -1940,7 +1941,6 @@ MonoBehaviour:
   - {x: 1.42, y: -1.21, z: 0}
   targetDistanceThreshold: 0.01
   targetLookThreshold: 0.05
-  SuspicionRate: 1
 --- !u!58 &1963407008
 CircleCollider2D:
   m_ObjectHideFlags: 0
