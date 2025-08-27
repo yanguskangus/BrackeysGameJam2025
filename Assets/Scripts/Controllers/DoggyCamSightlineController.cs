@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// TODO: Should refactor so this and MovingEnemySightlineController inherit from the same class
 public class DoggyCamSightlineController : MonoBehaviour
 {
     [SerializeField] private DoggyCamController doggyCam;

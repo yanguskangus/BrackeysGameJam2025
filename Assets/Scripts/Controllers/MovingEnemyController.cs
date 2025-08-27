@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MovingEnemyController : MonoBehaviour
 {
@@ -24,13 +26,13 @@ public class MovingEnemyController : MonoBehaviour
     /// Distance to target at which enemy is "close enough" to target
     /// </summary>
     [SerializeField]
-    private float targetDistanceThreshold;
+    private float targetDistanceThreshold; // Could probably be a constant
 
     /// <summary>
     /// Degrees to target at which enemy is "close enough" to facing target
     /// </summary>
     [SerializeField]
-    private float targetLookThreshold;
+    private float targetLookThreshold; // Could probably be a constant
 
     /// <summary>
     /// How much suspicion being spotted by this enemy builds, per frame
@@ -47,7 +49,7 @@ public class MovingEnemyController : MonoBehaviour
     void Start()
     {
         // TODO: Spawn at pathingPoints[0] (?)
-        nextPathingPointIndex = pathingPoints.Length > 1 ? 1 : 0;
+        nextPathingPointIndex = 0;
     }
 
     // Update is called once per frame
@@ -57,7 +59,7 @@ public class MovingEnemyController : MonoBehaviour
         Vector3 target = pathingPoints[nextPathingPointIndex];
         if (isAtTargetPoint(target)) {
             nextPathingPointIndex++;
-            if (nextPathingPointIndex > pathingPoints.Length)
+            if (nextPathingPointIndex > pathingPoints.Length - 1)
             {
                 nextPathingPointIndex = 0;
             }
@@ -67,15 +69,14 @@ public class MovingEnemyController : MonoBehaviour
         if (isLookingAt(target))
         {
             // If facing the next point, move towards it
-            transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
         }
         else
         {
             // If not facing the next point, turn towards it
-            Vector3 targetDirection = target - transform.position;
-            float rotateStep = turnSpeed * Time.deltaTime;
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, rotateStep, 0);
-            transform.rotation = Quaternion.LookRotation(newDirection);
+            float angle = Mathf.Atan2(target.y - transform.position.y, target.x - transform.position.x) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
         }
     }
 
@@ -86,6 +87,12 @@ public class MovingEnemyController : MonoBehaviour
 
     private bool isLookingAt(Vector3 target)
     {
-        return Vector3.Angle(transform.forward, target - transform.position) <= targetLookThreshold;
+        return Vector3.Angle(getForward2D(), target - transform.position) <= targetLookThreshold;
+    }
+
+    private Vector3 getForward2D()
+    {
+        // Thank you Unity 2D
+        return transform.right;
     }
 }
