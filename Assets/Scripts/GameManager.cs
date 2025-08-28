@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 {
     // NPCs and Units
     [SerializeField] private PlayerDogController playerDog;
+    [SerializeField] private List<HumanController> men;
+    [SerializeField] private List<DalmationController> dalmations;
 
     // UI components
     [SerializeField] private TMP_Text gameOverText;
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         playerDog.OnExceedSuspicion += HandleExceedSuspicion;
         playerDog.OnDepositBiscuit += HandleDepositBiscuit;
+        playerDog.OnPickupBiscuit += HandlePickupBiscuit;
 
         playerDog.transform.position = spawnPoint.position;
     }
@@ -37,6 +40,22 @@ public class GameManager : MonoBehaviour
     private void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void HandlePickupBiscuit()
+    {
+
+        // TODO: these two are both just setting alert mode.  Maybe
+        // it makes more sense to just use an enemycontroller list and call an abstract setalertmode
+        foreach (var man in men)
+        {
+            man.SetAlertMode();
+        }
+
+        foreach (var dalmation in dalmations)
+        {
+            dalmation.SetAlertMode();
+        }
     }
 
     private void HandleDepositBiscuit()

@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 729af3b97e58e2e4f9f2a2c924289914
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1537189500303374786
+    second: Dog_Floor_Bone_Enemy_0
+  - first:
+      213: 1579662174663592450
+    second: Dog_Floor_Bone_Enemy_1
+  - first:
+      213: -1123605073844155661
+    second: Dog_Floor_Bone_Enemy_2
+  - first:
+      213: 66357353216786699
+    second: Dog_Floor_Bone_Enemy_3
+  - first:
+      213: 5489712180879791568
+    second: Dog_Floor_Bone_Enemy_4
+  - first:
+      213: 577168315691441802
+    second: Dog_Floor_Bone_Enemy_5
+  - first:
+      213: -4714439941306152722
+    second: Dog_Floor_Bone_Enemy_6
+  - first:
+      213: 2891542025202391189
+    second: Dog_Floor_Bone_Enemy_7
+  - first:
+      213: -5507488927128024834
+    second: Dog_Floor_Bone_Enemy_8
+  - first:
+      213: -3358024553464179042
+    second: Dog_Floor_Bone_Enemy_9
+  - first:
+      213: 3086979696120562087
+    second: Dog_Floor_Bone_Enemy_10
+  - first:
+      213: -5873502709708987895
+    second: Dog_Floor_Bone_Enemy_11
+  - first:
+      213: 6064423930149943514
+    second: Dog_Floor_Bone_Enemy_12
+  - first:
+      213: -6843188689356862939
+    second: Dog_Floor_Bone_Enemy_13
+  - first:
+      213: 4565757434724546562
+    second: Dog_Floor_Bone_Enemy_14
+  - first:
+      213: -3674666437755835513
+    second: Dog_Floor_Bone_Enemy_15
+  - first:
+      213: -6344040094994447935
+    second: Dog_Floor_Bone_Enemy_16
+  - first:
+      213: 3557116878124753602
+    second: Dog_Floor_Bone_Enemy_17
+  - first:
+      213: 8953760988898710965
+    second: Dog_Floor_Bone_Enemy_18
+  - first:
+      213: -3620083858233849795
+    second: Dog_Floor_Bone_Enemy_19
+  - first:
+      213: -6051775340960263127
+    second: Dog_Floor_Bone_Enemy_20
+  - first:
+      213: -3284676023689058030
+    second: Dog_Floor_Bone_Enemy_21
+  - first:
+      213: 108383001850699071
+    second: Dog_Floor_Bone_Enemy_22
+  - first:
+      213: 8755858067537486820
+    second: Dog_Floor_Bone_Enemy_23
+  - first:
+      213: 3451835821710620589
+    second: Dog_Floor_Bone_Enemy_24
+  - first:
+      213: 6534188927080174878
+    second: Dog_Floor_Bone_Enemy_25
+  - first:
+      213: 1188055619653582982
+    second: Dog_Floor_Bone_Enemy_26
+  - first:
+      213: -5254586659166691110
+    second: Dog_Floor_Bone_Enemy_27
+  - first:
+      213: -1235098794749799538
+    second: Dog_Floor_Bone_Enemy_28
+  - first:
+      213: 7886675466363760116
+    second: Dog_Floor_Bone_Enemy_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 362
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9fa06c4b1355510800000000000000
+      internalID: 1537189500303374786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 362
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ac1f1e0661ce510800000000000000
+      internalID: 1579662174663592450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 361
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa41b173272860f0800000000000000
+      internalID: -1123605073844155661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 350
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01c8b249afbbe000800000000000000
+      internalID: 66357353216786699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 367
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5997c84206f2c40800000000000000
+      internalID: 5489712180879791568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 362
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e16607683820800800000000000000
+      internalID: 577168315691441802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_6
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 362
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8888ff9d1f29eb0800000000000000
+      internalID: -4714439941306152722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 329
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5985d41e622d02820800000000000000
+      internalID: 2891542025202391189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_8
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 319
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8032e20087193b0800000000000000
+      internalID: -5507488927128024834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 330
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e965abfc576e561d0800000000000000
+      internalID: -3358024553464179042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_10
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 329
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a10c189da727da20800000000000000
+      internalID: 3086979696120562087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_11
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 345
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902608897602d7ea0800000000000000
+      internalID: -5873502709708987895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_12
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 328
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad837fb0f69292450800000000000000
+      internalID: 6064423930149943514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_13
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 324
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ac9efc42c1801a0800000000000000
+      internalID: -6843188689356862939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 290
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208fa5b4234dc5f30800000000000000
+      internalID: 4565757434724546562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 290
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b63851856f00dc0800000000000000
+      internalID: -3674666437755835513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_16
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 293
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c14501552175f7a0800000000000000
+      internalID: -6344040094994447935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_17
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 310
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c22c2944fa6d5130800000000000000
+      internalID: 3557116878124753602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 293
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5de0b2e26224c70800000000000000
+      internalID: 8953760988898710965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_19
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 305
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3888d439e0e2cdc0800000000000000
+      internalID: -3620083858233849795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_20
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 265
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924589d1466c30ca0800000000000000
+      internalID: -6051775340960263127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_21
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 263
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21965c53f8c7a62d0800000000000000
+      internalID: -3284676023689058030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 98
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d500514cd018100800000000000000
+      internalID: 108383001850699071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_23
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 195
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e36f4b958e038970800000000000000
+      internalID: 8755858067537486820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 229
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7b708246267ef20800000000000000
+      internalID: 3451835821710620589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 193
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1597e5a53a1eaa50800000000000000
+      internalID: 6534188927080174878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_26
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 158
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680cbde9a42dc7010800000000000000
+      internalID: 1188055619653582982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_27
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 127
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0ecd20645f317b0800000000000000
+      internalID: -5254586659166691110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_28
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 105
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83dc64a03c0cdee0800000000000000
+      internalID: -1235098794749799538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Floor_Bone_Enemy_29
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 82
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd666f1d89137d60800000000000000
+      internalID: 7886675466363760116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d8c6104062367524ea5c36a677dc0cc8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dog_Floor_Bone_Enemy_0: 1537189500303374786
+      Dog_Floor_Bone_Enemy_1: 1579662174663592450
+      Dog_Floor_Bone_Enemy_10: 3086979696120562087
+      Dog_Floor_Bone_Enemy_11: -5873502709708987895
+      Dog_Floor_Bone_Enemy_12: 6064423930149943514
+      Dog_Floor_Bone_Enemy_13: -6843188689356862939
+      Dog_Floor_Bone_Enemy_14: 4565757434724546562
+      Dog_Floor_Bone_Enemy_15: -3674666437755835513
+      Dog_Floor_Bone_Enemy_16: -6344040094994447935
+      Dog_Floor_Bone_Enemy_17: 3557116878124753602
+      Dog_Floor_Bone_Enemy_18: 8953760988898710965
+      Dog_Floor_Bone_Enemy_19: -3620083858233849795
+      Dog_Floor_Bone_Enemy_2: -1123605073844155661
+      Dog_Floor_Bone_Enemy_20: -6051775340960263127
+      Dog_Floor_Bone_Enemy_21: -3284676023689058030
+      Dog_Floor_Bone_Enemy_22: 108383001850699071
+      Dog_Floor_Bone_Enemy_23: 8755858067537486820
+      Dog_Floor_Bone_Enemy_24: 3451835821710620589
+      Dog_Floor_Bone_Enemy_25: 6534188927080174878
+      Dog_Floor_Bone_Enemy_26: 1188055619653582982
+      Dog_Floor_Bone_Enemy_27: -5254586659166691110
+      Dog_Floor_Bone_Enemy_28: -1235098794749799538
+      Dog_Floor_Bone_Enemy_29: 7886675466363760116
+      Dog_Floor_Bone_Enemy_3: 66357353216786699
+      Dog_Floor_Bone_Enemy_4: 5489712180879791568
+      Dog_Floor_Bone_Enemy_5: 577168315691441802
+      Dog_Floor_Bone_Enemy_6: -4714439941306152722
+      Dog_Floor_Bone_Enemy_7: 2891542025202391189
+      Dog_Floor_Bone_Enemy_8: -5507488927128024834
+      Dog_Floor_Bone_Enemy_9: -3358024553464179042
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -31,6 +31,7 @@ public class PlayerDogController : MonoBehaviour
     // Events
     public System.Action OnExceedSuspicion;
     public System.Action OnDepositBiscuit;
+    public System.Action OnPickupBiscuit;
 
     // Animations
     [SerializeField] private Animator animator;
@@ -186,6 +187,7 @@ public class PlayerDogController : MonoBehaviour
         CarryBiscuit = true;
 
         PositionBiscuit(spriteRenderer.flipX);
+        OnPickupBiscuit?.Invoke();
     }
 
     private void PositionBiscuit(bool flipped)
