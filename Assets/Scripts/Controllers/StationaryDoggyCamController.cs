@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class StationaryDoggyCamController : MonoBehaviour
 {
-    [SerializeField] protected SightlineController sightlineController;
+    [SerializeField] public SightlineController sightlineController;
     [SerializeField] protected SpriteRenderer sightlineSpriteRenderer;
     [SerializeField] protected SpriteRenderer spriteRenderer;
+    [SerializeField] public Collider2D sightCollider;
 
     // Sightline Visuals
     [SerializeField] protected Color passiveColor = new Color(0.52f, 0.75f, 0.58f, 0.39f);
@@ -16,8 +17,7 @@ public class StationaryDoggyCamController : MonoBehaviour
     [SerializeField] private List<Transform> raycastPositions;
 
     public bool IsAlert;
-
-    private PlayerDogController _lookTarget;
+    public PlayerDogController LookTarget { get; set; }
 
     // Initiali settings
     private Vector3 _sightlinePos;
@@ -39,7 +39,7 @@ public class StationaryDoggyCamController : MonoBehaviour
     {
         get
         {
-            return _lookTarget.dogCenter.transform.position;
+            return LookTarget.dogCenter.transform.position;
         }
     }
 
@@ -70,7 +70,7 @@ public class StationaryDoggyCamController : MonoBehaviour
     {
         if (IsAlert)
         {
-            _lookTarget = controller;
+            LookTarget = controller;
         }
     }
 
@@ -148,7 +148,7 @@ public class StationaryDoggyCamController : MonoBehaviour
 
     private void Update()
     {
-        if (IsAlert && _lookTarget != null && validZone.OverlapPoint(_lookTarget.transform.position))
+        if (IsAlert && LookTarget != null && validZone.OverlapPoint(LookTarget.transform.position))
         {
             // Rotate camera to look at the target
             var dir = _flip * (FocusPosition - transform.position);
@@ -171,12 +171,12 @@ public class StationaryDoggyCamController : MonoBehaviour
 
     private bool Tracking()
     {
-        return IsAlert && _lookTarget != null;
+        return IsAlert && LookTarget != null;
     }
 
     private void UnsetLookTarget()
     {
-        _lookTarget = null;
+        LookTarget = null;
 
         ResetTransform(transform, _cameraPos, _cameraScale, _cameraRotation);
         ResetTransform(sightlineController.transform, _sightlinePos, _sightlightScale, _sightlineRotation);

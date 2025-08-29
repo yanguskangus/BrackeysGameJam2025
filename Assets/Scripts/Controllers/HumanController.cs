@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HumanController : EnemyController
 {
-    private void Start()
+    protected void Awake()
     {
         sightlineController.OnNoticeDog += HandleNoticeDog;
         catchDogDetector.OnCaughtDog += HandleCaughtDog;
@@ -30,7 +31,7 @@ public class HumanController : EnemyController
         sightlineSpriteRenderer.color = dangerColor;
     }
 
-    private void HandleCaughtDog(PlayerDogController dogController)
+    protected void HandleCaughtDog(PlayerDogController dogController)
     {
         if (IsAlert)
         {
@@ -41,6 +42,14 @@ public class HumanController : EnemyController
     private void HandleNoticeDog(PlayerDogController player)
     {
         if (IsAlert)
+        {
+            TriggerChase(player);
+        }
+    }
+
+    public void TriggerChase(PlayerDogController player)
+    {
+        if (moveController.MoveState != MoveState.Chase)
         {
             StartCoroutine(ChaseDelay(player, chaseDelaySec));
         }
