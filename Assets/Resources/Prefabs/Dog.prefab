@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1027339849877666516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7698950253637567799}
+  m_Layer: 7
+  m_Name: DogCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7698950253637567799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027339849877666516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1156876790225075628}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1901213700823781787
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -4260451143279442596, guid: f8f3aaf803f726c4d9a8b6bbd95b6a9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -261,6 +292,7 @@ Transform:
   m_Children:
   - {fileID: 459538423984332103}
   - {fileID: 1121182567483198498}
+  - {fileID: 7698950253637567799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-6396359706302979529
@@ -276,6 +308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4887449446047563539}
+  animator: {fileID: 9055800126455742674}
+  spriteRenderer: {fileID: 4169248045974847624}
+  dogCenter: {fileID: 7698950253637567799}
   moveSpeed: 2
   dashSpeed: 5
   dashCooldownDuration: 0.1
@@ -284,8 +319,6 @@ MonoBehaviour:
   suspicionDecayInterval: 1
   suspicionDecayRate: 10
   Suspicion: 0
-  animator: {fileID: 9055800126455742674}
-  spriteRenderer: {fileID: 4169248045974847624}
   carriedBiscuit: {fileID: 1901213700823781787}
   CarryBiscuit: 0
 --- !u!114 &-8124080144986766909
@@ -499,7 +532,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &4674879134173474775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -534,7 +567,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.036930144, y: 0.15641677}
+  m_Offset: {x: 0.014228821, y: 0.06283307}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.22}
@@ -544,7 +577,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.48655474, y: 0.2042005}
+  m_Size: {x: 0.35927963, y: 0.056962013}
   m_EdgeRadius: 0
 --- !u!95 &9055800126455742674
 Animator:

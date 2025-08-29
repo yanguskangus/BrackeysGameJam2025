@@ -9,6 +9,7 @@ public abstract class EnemyController : MonoBehaviour
     [SerializeField] protected SightlineController sightlineController;
     [SerializeField] protected CatchDogDetector catchDogDetector;
     [SerializeField] protected SpriteRenderer sightlineSpriteRenderer;
+    [SerializeField] private Rigidbody2D rb;
 
     // Sightline Visuals
     [SerializeField] protected Color passiveColor = new Color(0.52f, 0.75f, 0.58f, 0.39f);

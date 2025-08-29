@@ -5,18 +5,27 @@ using TMPro;
 
 public class PlayerDogController : MonoBehaviour
 {
-    // Movement
+    // Components 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public Transform dogCenter; // This is nice for some aesthetic things like doggy cam tracking
+
+    // Movement
     [SerializeField] private float moveSpeed;
 
     // dashing
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashCooldownDuration;
     [SerializeField] private float dashDuration;
+
     private float _dashTime;
     private float _dashCooldownTime;
     private Vector2 _dashDirection;
     private bool _dashing;
+
+    // pushing
+    [SerializeField] private float pushForce;
 
     private Vector2 _moveInput;
 
@@ -32,10 +41,6 @@ public class PlayerDogController : MonoBehaviour
     public System.Action OnExceedSuspicion;
     public System.Action OnDepositBiscuit;
     public System.Action OnPickupBiscuit;
-
-    // Animations
-    [SerializeField] private Animator animator;
-    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // Biscuits
     [SerializeField] private GameObject carriedBiscuit;
@@ -91,6 +96,33 @@ public class PlayerDogController : MonoBehaviour
         }
 
         PositionBiscuit(spriteRenderer.flipX);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag(Tags.BreakableBox))
+        {
+            if (_dashing)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag(Tags.BreakableBox))
+        {
+            if (_dashing)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
+                breakableBox.Rb.AddForceAtPosition(_moveInput, other.contacts[0].point, ForceMode2D.Impulse);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

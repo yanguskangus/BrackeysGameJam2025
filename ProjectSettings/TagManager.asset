@@ -7,6 +7,9 @@ TagManager:
   - Biscuit
   - Goal
   - Dog
+  - Box
+  - Hole
+  - BreakableBox
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - UI
   - Human
   - Dog
-  - 
+  - CameraBlocker
   - 
   - 
   - 

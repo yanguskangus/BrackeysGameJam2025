@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DoggyCamController : MonoBehaviour
 {
-    [SerializeField] private SightlineController sightlineController;
+    [SerializeField] public SightlineController sightlineController;
     [SerializeField] private float offDuration;
     [SerializeField] private float onDuration;
     [SerializeField] private bool startOn = true;
