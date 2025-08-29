@@ -104,7 +104,8 @@ public class PlayerDogController : MonoBehaviour
         {
             if (_dashing)
             {
-                Destroy(other.gameObject);
+                var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
+                BreakBox(breakableBox);
             }
         }
     }
@@ -113,16 +114,22 @@ public class PlayerDogController : MonoBehaviour
     {
         if (other.gameObject.CompareTag(Tags.BreakableBox))
         {
+            var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
+
             if (_dashing)
             {
-                Destroy(other.gameObject);
+                BreakBox(breakableBox);
             }
             else
             {
-                var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
                 breakableBox.Rb.AddForceAtPosition(_moveInput, other.contacts[0].point, ForceMode2D.Impulse);
             }
         }
+    }
+
+    private void BreakBox(BreakableBoxController box)
+    {
+        box.BreakBox();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

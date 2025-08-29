@@ -16,7 +16,11 @@ public static class Layer
 
 public static class AnimationParameters
 {
+    // Character animations
     public static string Running = "Running";
     public static string Dashing = "Dashing";
+
+    public static string BreakBox = "BreakBox";
 }
+
 

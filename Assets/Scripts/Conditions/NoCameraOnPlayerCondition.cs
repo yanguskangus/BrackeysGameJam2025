@@ -15,7 +15,6 @@ public class NoCameraOnPlayerCondition : MonoBehaviour, ITriggerCondition
         {
             foreach (var collider in colliders)
             {
-                Debug.Log(collider.name);
                 if (collider.CompareTag(Tags.Dog))
                 {
                     return false;

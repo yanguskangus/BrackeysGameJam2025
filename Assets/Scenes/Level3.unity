@@ -2157,7 +2157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDog: {fileID: 80149395798588658}
-  men: []
+  men:
+  - {fileID: 839793523}
+  - {fileID: 551218557}
   dalmations: []
   cameras:
   - {fileID: 1280804738}
@@ -2165,7 +2167,7 @@ MonoBehaviour:
   gameOverText: {fileID: 428943299}
   gameWinText: {fileID: 391814098}
   spawnPoint: {fileID: 729788094}
-  dontSpawnBed: 1
+  dontSpawnBed: 0
 --- !u!4 &1504379078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8750423978610325762, guid: c458186d9616c7646892d063c2fedf3f, type: 3}
