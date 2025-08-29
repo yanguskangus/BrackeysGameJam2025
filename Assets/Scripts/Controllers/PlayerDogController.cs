@@ -5,14 +5,20 @@ using TMPro;
 
 public class PlayerDogController : MonoBehaviour
 {
-    // Movement
+    // Components 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public Transform dogCenter; // This is nice for some aesthetic things like doggy cam tracking
+
+    // Movement
     [SerializeField] private float moveSpeed;
 
     // dashing
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashCooldownDuration;
     [SerializeField] private float dashDuration;
+
     private float _dashTime;
     private float _dashCooldownTime;
     private Vector2 _dashDirection;
@@ -32,10 +38,6 @@ public class PlayerDogController : MonoBehaviour
     public System.Action OnExceedSuspicion;
     public System.Action OnDepositBiscuit;
     public System.Action OnPickupBiscuit;
-
-    // Animations
-    [SerializeField] private Animator animator;
-    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // Biscuits
     [SerializeField] private GameObject carriedBiscuit;

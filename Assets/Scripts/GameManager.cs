@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerDogController playerDog;
     [SerializeField] private List<HumanController> men;
     [SerializeField] private List<DalmationController> dalmations;
+    [SerializeField] private List<StationaryDoggyCamController> cameras;
 
     // UI components
     [SerializeField] private TMP_Text gameOverText;
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
     // Level data
     [SerializeField] private Transform spawnPoint;
 
+    // DEBUG
+    [SerializeField] private bool dontSpawnBed;
+
 
     private void Start()
     {
@@ -26,7 +30,10 @@ public class GameManager : MonoBehaviour
         playerDog.OnDepositBiscuit += HandleDepositBiscuit;
         playerDog.OnPickupBiscuit += HandlePickupBiscuit;
 
-        playerDog.transform.position = spawnPoint.position;
+        if (!dontSpawnBed)
+        {
+            playerDog.transform.position = spawnPoint.position;
+        }
     }
 
     private void Update()
@@ -55,6 +62,11 @@ public class GameManager : MonoBehaviour
         foreach (var dalmation in dalmations)
         {
             dalmation.SetAlertMode();
+        }
+
+        foreach (var camera in cameras)
+        {
+            camera.SetAlarmState(true);
         }
     }
 
