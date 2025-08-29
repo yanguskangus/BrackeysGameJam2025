@@ -98,12 +98,30 @@ public class PlayerDogController : MonoBehaviour
         PositionBiscuit(spriteRenderer.flipX);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag(Tags.BreakableBox))
+        {
+            if (_dashing)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag(Tags.BreakableBox))
         {
-            var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
-            breakableBox.Rb.AddForceAtPosition(_moveInput, other.contacts[0].point, ForceMode2D.Impulse);
+            if (_dashing)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
+                breakableBox.Rb.AddForceAtPosition(_moveInput, other.contacts[0].point, ForceMode2D.Impulse);
+            }
         }
     }
 
