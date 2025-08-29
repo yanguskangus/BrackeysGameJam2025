@@ -24,6 +24,9 @@ public class PlayerDogController : MonoBehaviour
     private Vector2 _dashDirection;
     private bool _dashing;
 
+    // pushing
+    [SerializeField] private float pushForce;
+
     private Vector2 _moveInput;
 
     // Suspicion meter
@@ -93,6 +96,15 @@ public class PlayerDogController : MonoBehaviour
         }
 
         PositionBiscuit(spriteRenderer.flipX);
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag(Tags.BreakableBox))
+        {
+            var breakableBox = other.gameObject.GetComponent<BreakableBoxController>();
+            breakableBox.Rb.AddForceAtPosition(_moveInput, other.contacts[0].point, ForceMode2D.Impulse);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

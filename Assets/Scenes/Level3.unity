@@ -2058,6 +2058,7 @@ GameObject:
   - component: {fileID: 1504379079}
   - component: {fileID: 1504379080}
   - component: {fileID: 1504379081}
+  - component: {fileID: 1504379082}
   m_Layer: 8
   m_Name: Box
   m_TagString: BreakableBox
@@ -2189,12 +2190,12 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504379077}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 20
+  m_LinearDamping: 20
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -2207,7 +2208,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1504379082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504379077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c850e8c7d183bb74a876020f52e68b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rb: {fileID: 1504379081}
 --- !u!1 &1558850268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,6 +2415,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1016214947}
     - target: {fileID: -6396359706302979529, guid: 3ac2b8d0fb2e28b47a0fcf7ee106dd26, type: 3}
+      propertyPath: pushForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6396359706302979529, guid: 3ac2b8d0fb2e28b47a0fcf7ee106dd26, type: 3}
       propertyPath: dashEffect
       value: 
       objectReference: {fileID: 0}
@@ -2484,6 +2502,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 241648119}
     m_Modifications:
+    - target: {fileID: 2448380252129191737, guid: ae26d6d53b937094685fdc3befc63f57, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0234413
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448380252129191737, guid: ae26d6d53b937094685fdc3befc63f57, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.011720628
+      objectReference: {fileID: 0}
     - target: {fileID: 2973935710698691548, guid: ae26d6d53b937094685fdc3befc63f57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.406

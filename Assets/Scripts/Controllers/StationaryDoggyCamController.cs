@@ -148,39 +148,30 @@ public class StationaryDoggyCamController : MonoBehaviour
 
     private void Update()
     {
-        if (IsAlert)
+        if (IsAlert && _lookTarget != null && validZone.OverlapPoint(_lookTarget.transform.position))
         {
-            if (_lookTarget != null)
-            {
-                if (validZone.OverlapPoint(_lookTarget.transform.position))
-                {
-                    // Rotate camera to look at the target
-                    var dir = _flip * (FocusPosition - transform.position);
+            // Rotate camera to look at the target
+            var dir = _flip * (FocusPosition - transform.position);
 
-                    var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    // Resize line of sight.  Note, this will be overridden by raycast (if blocked by a box)
-                    RecalculateSightlineTransform((FocusPosition - transform.position).magnitude);
-                }
-                else
-                {
-                    UnsetLookTarget();
-                }
-            }
+            // Resize line of sight.  Note, this will be overridden by raycast (if blocked by a box)
+            RecalculateSightlineTransform((FocusPosition - transform.position).magnitude);
         }
         else
         {
-            if (_lookTarget != null)
-            {
-                UnsetLookTarget();
-            }
+            UnsetLookTarget();
         }
 
         RaycastSightline(sightlineController.transform.lossyScale.x);
 
         // Calculate sightline again and check if a block blocks the camera sightline
+    }
 
+    private bool Tracking()
+    {
+        return IsAlert && _lookTarget != null;
     }
 
     private void UnsetLookTarget()
