@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5661621205090688841}
   m_Layer: 0
   m_Name: Dalmation
-  m_TagString: Untagged
+  m_TagString: Dalmation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -6344040094994447935, guid: 729af3b97e58e2e4f9f2a2c924289914, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   sightlineController: {fileID: 9033795402217907958}
   catchDogDetector: {fileID: 623791028955956749}
   sightlineSpriteRenderer: {fileID: 3729797699069765321}
+  rb: {fileID: 0}
   passiveColor: {r: 0.52, g: 0.75, b: 0.58, a: 0.39}
   dangerColor: {r: 1, g: 0, b: 0, a: 0.39}
   alertIndicator: {fileID: 8961730236387334171}

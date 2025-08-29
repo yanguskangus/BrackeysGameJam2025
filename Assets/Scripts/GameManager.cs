@@ -26,6 +26,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (playerDog == null)
+        {
+            playerDog = GameObject.FindGameObjectWithTag(Tags.Dog).GetComponent<PlayerDogController>();
+        }
+
+        LoadDynamicContent<HumanController>(men, Tags.Man);
+        LoadDynamicContent<DalmationController>(dalmations, Tags.Dalmation);
+        LoadDynamicContent<StationaryDoggyCamController>(cameras, Tags.DoggyCam);
+
         playerDog.OnExceedSuspicion += HandleExceedSuspicion;
         playerDog.OnDepositBiscuit += HandleDepositBiscuit;
         playerDog.OnPickupBiscuit += HandlePickupBiscuit;
@@ -33,6 +42,19 @@ public class GameManager : MonoBehaviour
         if (!dontSpawnBed)
         {
             playerDog.transform.position = spawnPoint.position;
+        }
+    }
+
+    private void LoadDynamicContent<T>(List<T> results, string tag) where T : MonoBehaviour
+    {
+        var objs = GameObject.FindGameObjectsWithTag(tag);
+        foreach (var obj in objs)
+        {
+            var controller = obj.GetComponent<T>();
+            if (!results.Contains(controller))
+            {
+                results.Add(controller);
+            }
         }
     }
 

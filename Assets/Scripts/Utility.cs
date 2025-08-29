@@ -5,7 +5,10 @@ public static class Tags
     public static string Biscuit = "Biscuit";
     public static string Goal = "Goal";
     public static string Dog = "Dog";
+    public static string Man = "Man";
     public static string BreakableBox = "BreakableBox";
+    public static string DoggyCam = "DoggyCam";
+    public static string Dalmation = "Dalmation";
 }
 
 public static class Layer

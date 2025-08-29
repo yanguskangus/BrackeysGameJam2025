@@ -47,6 +47,9 @@ public class DalmationController : EnemyController
 
     private void HandleNoticeDog(PlayerDogController player)
     {
-        StartCoroutine(ChaseDelay(player, chaseDelaySec));
+        if (moveController.MoveState != MoveState.Chase)
+        {
+            StartCoroutine(ChaseDelay(player, chaseDelaySec));
+        }
     }
 }
