@@ -106,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4260451143279442596, guid: f8f3aaf803f726c4d9a8b6bbd95b6a9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -315,6 +315,7 @@ MonoBehaviour:
   dashSpeed: 5
   dashCooldownDuration: 0.1
   dashDuration: 0.15
+  pushForce: 0
   maxSuspicion: 100
   suspicionDecayInterval: 1
   suspicionDecayRate: 10
@@ -521,7 +522,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -405880348, guid: c16fff390b5048845a31507ac8d1ccf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
