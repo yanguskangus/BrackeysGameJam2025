@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog
       objectReference: {fileID: 0}
+    - target: {fileID: 7951224101209742846, guid: 3ac2b8d0fb2e28b47a0fcf7ee106dd26, type: 3}
+      propertyPath: orthographic size
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -770,12 +774,28 @@ PrefabInstance:
       value: Man (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4949933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: MoveState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: chaseSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1743,12 +1763,28 @@ PrefabInstance:
       value: Man (6)
       objectReference: {fileID: 0}
     - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4949933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: MoveState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: chaseSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1812,12 +1848,28 @@ PrefabInstance:
       value: Man (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4949933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: MoveState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: chaseSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2115,12 +2167,28 @@ PrefabInstance:
       value: Man (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4949933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: MoveState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: chaseSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2559,12 +2627,28 @@ PrefabInstance:
       value: Man (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4949933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: MoveState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: chaseSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2937,6 +3021,14 @@ PrefabInstance:
       value: Wall_Back (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6090305459375918308, guid: e6842a1222660bc4d84b6f604587e325, type: 3}
+      propertyPath: m_Color.g
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090305459375918308, guid: e6842a1222660bc4d84b6f604587e325, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090305459375918308, guid: e6842a1222660bc4d84b6f604587e325, type: 3}
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
@@ -3067,12 +3159,28 @@ PrefabInstance:
       value: Man
       objectReference: {fileID: 0}
     - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4949933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085608450483213, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
       propertyPath: MoveState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236212373302587797, guid: c3d5fbc415664254f864129449b61cbc, type: 3}
+      propertyPath: chaseSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
