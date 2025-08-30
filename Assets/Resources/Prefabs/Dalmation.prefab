@@ -110,8 +110,8 @@ MonoBehaviour:
   catchDogDetector: {fileID: 623791028955956749}
   sightlineSpriteRenderer: {fileID: 3729797699069765321}
   rb: {fileID: 0}
-  passiveColor: {r: 0.52, g: 0.75, b: 0.58, a: 0.39}
-  dangerColor: {r: 1, g: 0, b: 0, a: 0.39}
+  passiveColor: {r: 0.52, g: 0.75, b: 0.58, a: 1}
+  dangerColor: {r: 1, g: 0, b: 0, a: 1}
   alertIndicator: {fileID: 8961730236387334171}
   chaseDelaySec: 0.1
   IsAlert: 0

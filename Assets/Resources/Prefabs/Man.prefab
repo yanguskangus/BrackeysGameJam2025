@@ -184,8 +184,8 @@ MonoBehaviour:
   catchDogDetector: {fileID: 4547894226647265111}
   sightlineSpriteRenderer: {fileID: 812534020530873622}
   rb: {fileID: 0}
-  passiveColor: {r: 0.5161979, g: 0.754717, b: 0.5784203, a: 0.39215687}
-  dangerColor: {r: 1, g: 0, b: 0, a: 0.39215687}
+  passiveColor: {r: 0.5161979, g: 0.754717, b: 0.5784203, a: 1}
+  dangerColor: {r: 1, g: 0, b: 0, a: 1}
   alertIndicator: {fileID: 8026673131363326621}
   chaseDelaySec: 0.25
   IsAlert: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   chaseSpeed: 1.5
   ChaseTarget: {fileID: 0}
   ChaseTargetTag: 
+  movementType: 0
 --- !u!1 &8026673131363326621
 GameObject:
   m_ObjectHideFlags: 0
