@@ -116,7 +116,7 @@ MonoBehaviour:
   chaseDelaySec: 0.1
   IsAlert: 0
   spriteRenderer: {fileID: 8500451071498904829}
-  sniffDelaySec: 1
+  sniffDelaySec: 0.25
 --- !u!50 &8175028059592296632
 Rigidbody2D:
   serializedVersion: 5
