@@ -4,7 +4,6 @@ public class DalmationController : EnemyController
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float sniffDelaySec;
-    private bool _triggeredChase;
 
     private void Start()
     {
@@ -18,7 +17,7 @@ public class DalmationController : EnemyController
     {
         if (IsAlert)
         {
-            if (spriteRenderer.isVisible && !_triggeredChase)
+            if (spriteRenderer.isVisible && moveController.MoveState != MoveState.Chase)
             {
                 // When the dalmation smells the player's dog with a treat
                 // 1. Hide the sightline
@@ -28,7 +27,6 @@ public class DalmationController : EnemyController
                 sightlineController.gameObject.SetActive(false);
                 moveController.MoveState = MoveState.Stationary;
                 StartCoroutine(ChaseDelay(player, sniffDelaySec));
-                _triggeredChase = true;
             }
         }
 
