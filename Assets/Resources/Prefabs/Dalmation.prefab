@@ -166,6 +166,7 @@ MonoBehaviour:
   chaseSpeed: 1.5
   ChaseTarget: {fileID: 0}
   ChaseTargetTag: 
+  movementType: 1
 --- !u!1 &8961730236387334171
 GameObject:
   m_ObjectHideFlags: 0

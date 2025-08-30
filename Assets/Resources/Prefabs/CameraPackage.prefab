@@ -323,6 +323,11 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1704956225007000531, guid: b6fd415853ac1fc42bf240ef099f49a2, type: 3}
   m_PrefabInstance: {fileID: 6689951948397026671}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &6594958993789723953 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 527338529743288414, guid: b6fd415853ac1fc42bf240ef099f49a2, type: 3}
+  m_PrefabInstance: {fileID: 6689951948397026671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8327450285836156294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3406533520206471401, guid: b6fd415853ac1fc42bf240ef099f49a2, type: 3}
@@ -343,6 +348,7 @@ MonoBehaviour:
   sightlineController: {fileID: 4636930128148529468}
   sightlineSpriteRenderer: {fileID: 1064315515583299843}
   spriteRenderer: {fileID: 5439859605897283260}
+  sightCollider: {fileID: 6594958993789723953}
   passiveColor: {r: 0.52, g: 0.75, b: 0.58, a: 0.39}
   dangerColor: {r: 1, g: 0, b: 0, a: 0.39}
   validZone: {fileID: 2448380252129191737}
