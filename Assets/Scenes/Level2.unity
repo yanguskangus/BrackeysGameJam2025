@@ -1070,7 +1070,7 @@ MonoBehaviour:
   dontSpawnBed: 0
   LostLevel: 0
   WonLevel: 0
-  WinScreenDuration: 2
+  WinScreenDuration: 1
 --- !u!1 &1544225484
 GameObject:
   m_ObjectHideFlags: 0

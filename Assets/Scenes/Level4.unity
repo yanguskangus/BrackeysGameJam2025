@@ -2276,7 +2276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7842720668377112834, guid: 144f3d7ba62841046b4b68d059a71a79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.549
+      value: -0.066
       objectReference: {fileID: 0}
     - target: {fileID: 7842720668377112834, guid: 144f3d7ba62841046b4b68d059a71a79, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3017,7 +3017,7 @@ MonoBehaviour:
   dontSpawnBed: 0
   LostLevel: 0
   WonLevel: 0
-  WinScreenDuration: 0
+  WinScreenDuration: 1
 --- !u!1 &1718136721
 GameObject:
   m_ObjectHideFlags: 0

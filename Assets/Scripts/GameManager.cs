@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public bool LostLevel;
     public bool WonLevel;
 
-    public float WinScreenDuration;
+    public float WinScreenDuration = 1f;
 
     private void Start()
     {
@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
     {
         if (!LostLevel)
         {
+            WonLevel = true;
             StartCoroutine(WinRoutine());
         }
     }
@@ -129,9 +130,12 @@ public class GameManager : MonoBehaviour
 
     private void HandleExceedSuspicion()
     {
-        gameOverText.gameObject.SetActive(true);
-        LostLevel = true;
-        playerDog.GetComponent<PlayerInput>().enabled = false;
+        if (!WonLevel)
+        {
+            gameOverText.gameObject.SetActive(true);
+            LostLevel = true;
+            playerDog.GetComponent<PlayerInput>().enabled = false;
+        }
     }
 }
 

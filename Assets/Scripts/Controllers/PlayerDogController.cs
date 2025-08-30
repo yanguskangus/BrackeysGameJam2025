@@ -19,6 +19,9 @@ public class PlayerDogController : MonoBehaviour
     [SerializeField] private float dashCooldownDuration;
     [SerializeField] private float dashDuration;
 
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource pickupBiscuitSound;
+
     private float _dashTime;
     private float _dashCooldownTime;
     private Vector2 _dashDirection;
@@ -179,6 +182,9 @@ public class PlayerDogController : MonoBehaviour
         _dashing = true;
         _dashTime = dashDuration;
         _dashDirection = _moveInput;
+
+        // play dash sound
+        dashSound.Play();
     }
 
     private void DecaySuspicion()
@@ -227,6 +233,8 @@ public class PlayerDogController : MonoBehaviour
 
         PositionBiscuit(spriteRenderer.flipX);
         OnPickupBiscuit?.Invoke();
+
+        pickupBiscuitSound.Play();
     }
 
     private void PositionBiscuit(bool flipped)

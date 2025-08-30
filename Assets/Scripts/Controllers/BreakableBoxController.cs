@@ -10,6 +10,8 @@ public class BreakableBoxController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float brokenTime;
 
+    [SerializeField] private AudioSource boxPopAudioSource;
+
     private Vector3 _position;
 
     private void Start()
@@ -21,6 +23,8 @@ public class BreakableBoxController : MonoBehaviour
     {
         SetBoxState(false);
         animator.SetTrigger(AnimationParameters.BreakBox);
+
+        boxPopAudioSource.Play();
     }
 
     public void Respawn()

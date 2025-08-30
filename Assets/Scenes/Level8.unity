@@ -3218,7 +3218,7 @@ MonoBehaviour:
   dontSpawnBed: 0
   LostLevel: 0
   WonLevel: 0
-  WinScreenDuration: 0
+  WinScreenDuration: 1
 --- !u!1001 &1502456948
 PrefabInstance:
   m_ObjectHideFlags: 0

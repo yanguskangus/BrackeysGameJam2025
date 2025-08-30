@@ -1750,7 +1750,7 @@ MonoBehaviour:
   dontSpawnBed: 0
   LostLevel: 0
   WonLevel: 0
-  WinScreenDuration: 0
+  WinScreenDuration: 1
 --- !u!4 &1504379078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8750423978610325762, guid: c458186d9616c7646892d063c2fedf3f, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 // TODO: rename "enemy" dog
 public abstract class EnemyController : MonoBehaviour
 {
+    public AudioSource NoticeDogAudioSource;
     // Components
     [SerializeReference] protected EnemyMoveController moveController;
     [SerializeField] protected SightlineController sightlineController;
@@ -28,6 +29,11 @@ public abstract class EnemyController : MonoBehaviour
     protected IEnumerator ChaseDelay(PlayerDogController dogController, float chaseDelay)
     {
         alertIndicator.gameObject.SetActive(true);
+        if (NoticeDogAudioSource != null)
+        {
+            NoticeDogAudioSource.Play();
+        }
+
         yield return new WaitForSeconds(chaseDelay);
         alertIndicator.gameObject.SetActive(false);
         moveController.StartChase(dogController.gameObject, dogController.tag);
