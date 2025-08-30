@@ -24,7 +24,7 @@ public class EnemyMoveController : MonoBehaviour
     /// World points this enemy paths between
     /// </summary>
     [SerializeField]
-    protected Transform[] pathingPoints;
+    public Transform[] pathingPoints;
 
     /// <summary>
     /// Distance to target at which enemy is "close enough" to target
@@ -51,6 +51,8 @@ public class EnemyMoveController : MonoBehaviour
     [SerializeField] protected float chaseSpeed;
     public GameObject ChaseTarget;
     public string ChaseTargetTag;
+
+    [SerializeField] private MovementType movementType;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -89,15 +91,38 @@ public class EnemyMoveController : MonoBehaviour
         switch (MoveState)
         {
             case MoveState.Patrol:
-                HandlePatrolMovement();
+                if (movementType == MovementType.Human)
+                {
+                    HandleHumanPatrolMovement();
+                }
+                else if (movementType == MovementType.Dalmation)
+                {
+                    HandleDalmationPatrolMovement();
+                }
                 break;
             case MoveState.Chase:
-                HandleCatchMovement();
+                if (movementType == MovementType.Human)
+                {
+                    HandleHumanCatchMovement();
+                }
+                else if (movementType == MovementType.Dalmation)
+                {
+                    HandleDalmationCatchMovement();
+                }
+
                 break;
         }
     }
 
-    protected void HandleCatchMovement()
+    protected void HandleHumanCatchMovement()
+    {
+        Vector2 relativeDirection = (ChaseTarget.transform.position - transform.position).normalized;
+        rb.linearVelocity = chaseSpeed * relativeDirection;
+
+        var targetRotation = Quaternion.Euler(0, 180, 0) * transform.rotation;
+    }
+
+    protected void HandleDalmationCatchMovement()
     {
         Vector2 relativeDirection = (ChaseTarget.transform.position - transform.position).normalized;
         rb.linearVelocity = chaseSpeed * relativeDirection;
@@ -109,7 +134,7 @@ public class EnemyMoveController : MonoBehaviour
         }
     }
 
-    private void HandlePatrolMovement()
+    private void HandleHumanPatrolMovement()
     {
         if (pathingPoints.Length == 0)
         {
@@ -128,7 +153,32 @@ public class EnemyMoveController : MonoBehaviour
             }
             targetPosition = pathingPoints[nextPathingPointIndex].position;
 
-            // Decide if the dalmation needs to flip directio
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+    }
+
+    private void HandleDalmationPatrolMovement()
+    {
+        if (pathingPoints.Length == 0)
+        {
+            return;
+        }
+
+        // If at the next point, update nextPathingPoint
+        var nextPathingPoint = pathingPoints[nextPathingPointIndex];
+        Vector3 targetPosition = pathingPoints[nextPathingPointIndex].position;
+        if (isAtTargetPoint(targetPosition))
+        {
+            nextPathingPointIndex++;
+            if (nextPathingPointIndex > pathingPoints.Length - 1)
+            {
+                nextPathingPointIndex = 0;
+            }
+            targetPosition = pathingPoints[nextPathingPointIndex].position;
+
+            // Decide if the dalmation needs to flip direction
             if (TargetIsOppositeDirection(targetPosition))
             {
                 StartCoroutine(FlipAnimation());
@@ -164,7 +214,7 @@ public class EnemyMoveController : MonoBehaviour
     }
 
 
-    private bool isAtTargetPoint(Vector3 target)
+    public bool isAtTargetPoint(Vector3 target)
     {
         return Vector3.Distance(transform.position, target) <= targetDistanceThreshold;
     }
@@ -186,4 +236,10 @@ public enum MoveState
     Stationary,
     Patrol,
     Chase
+}
+
+public enum MovementType
+{
+    Human,
+    Dalmation
 }
