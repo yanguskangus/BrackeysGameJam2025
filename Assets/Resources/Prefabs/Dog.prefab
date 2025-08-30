@@ -312,8 +312,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4169248045974847624}
   dogCenter: {fileID: 7698950253637567799}
   moveSpeed: 2
-  dashSpeed: 5
-  dashCooldownDuration: 0.1
+  dashSpeed: 4
+  dashCooldownDuration: 0.12
   dashDuration: 0.15
   pushForce: 0
   maxSuspicion: 100
